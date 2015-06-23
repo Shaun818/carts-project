@@ -1,0 +1,237 @@
+/* so empty :( */
+body{
+    margin: 0;
+    padding: 0;
+}
+.no_padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+header{
+background:#333333;
+    height: 100px;
+    padding: 24px 15px 0;
+}
+.menu_icon{
+    padding:20px 0;
+}
+.icon-rei-hamburger-menu::before {
+color:#fff;
+}
+.icon-rei-cart::before {
+    color: #fff;
+}
+.cart_icon .icon-rei-cart{
+    /*float: left;
+    margin: 3px 0 0 49%;*/
+    width: 20px;
+}
+.logo{
+    text-align: center;
+}
+.cart_icon{
+    text-align: right;
+    padding:20px 10px 20px 0;
+}
+.cart_icon span {
+    background: #638902 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 4px;
+    border-radius:3px;
+}
+.main_item{
+    padding: 0;
+    list-style: none;
+}
+.main_item li{
+ float: left;
+    border-bottom: 1px solid #ccc;
+}
+.left_div img {
+    width: 80%;
+}
+.middle_div h3{
+font-size:18pt;
+}
+.middle_div p,span{
+    font-size:14pt;
+    width: 100%;
+}
+.middle_div strike{
+  color:#000;
+    margin: 0 0 0 5px;
+}
+.middle_div span{
+  color:#d00202;
+}
+.main_item li {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    margin: 30px 0;
+    padding:0 0 30px 0;
+    width: 100%;
+}
+.quantity .qnty{
+    float: left;
+    width:40px;
+    font-size: 14pt;
+}
+.quantity input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 0 5px 5px;
+    width: 54px;
+}
+.remove{
+    color: #658700;
+    float: left;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px 0 0 43px;
+}
+a,.icon{
+    cursor: pointer;
+}
+
+.bgGray{
+    background-color: #e5e5e5;
+    padding: 25px;
+}
+.paddingZero{
+    padding-right:0px;
+    padding-left:0px;
+    margin-right: -10px;
+}
+.clr-red{
+    color: red;
+}
+.margin-top-ten{
+    margin-top: 10px;
+}
+
+.quntdiv{
+    width:50px;
+    border:1px solid #ccc;
+    border-radius:3px;
+    margin-left: 5px;
+}
+.btn-warning{
+    min-width:165px;
+}
+.margin-left{
+    margin-left: 18px;
+}
+.shippingbtn{
+    background-color:#56493D!important;
+}
+
+.btn-warning_shippingbtn {
+    background-image: -webkit-linear-gradient(top, #56493D 0, #56493D 100%);
+    background-image: -o-linear-gradient(top, #56493D 0, #56493D 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#56493D), to(#56493D));
+    background-image: linear-gradient(to bottom, #56493D 0, #56493D 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56493D', endColorstr='#56493D', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #56493D;
+}
+
+.btn-warning:hover{
+    background-image:none;
+}
+.top_btnchechout{
+    margin-top: 20px;
+}
+#js-side-cart-items img{
+    width:120px;
+}
+.right_div ul{
+
+    padding: 0px 0 30px 0;
+}
+.right_div h5{
+font-size:14pt;
+    font-weight: bold;
+}
+.inner_ul li{
+    color:#668800;
+    font-size:14pt;
+}
+.inner_ul span {
+color:#000;
+}
+.inner_ul a {
+    color: #668800;
+    text-decoration: underline;
+}
+.inner_ul li {
+    list-style-type: none;
+}
+.right_img,.right_text{
+    text-align: center;
+}
+.right_text {
+margin: 0 0 20px 0;
+}
+.right_text span {
+    font-size: 14pt;
+}
+.icon-comment:before {
+    content: "\e631";
+    color: #668800;
+}
+#js-side-cart-items li{
+    list-style-type: none;
+}
+.inner_h5 {
+    font-size: 14pt;
+    margin-left: 40px;
+}
+@media(max-width:480px){
+    .btn-warning{
+        width:100%;
+    }
+    .margin-left{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .top_btnchechout{
+        margin-top:20px;
+    }
+    .inner_ul1{
+        margin-top: 20px;
+    }
+    #js-side-cart-items img {
+        width: 90px;
+    }
+    .right_text span {
+        font-size: 9pt;
+    }
+    .middle_div h3 {
+        font-size: 14pt;
+    }
+    .quantity .qnty {
+        font-size: 13pt;
+        margin-top: 20px;
+
+    }
+    .inner_ul li {
+
+        font-size: 9pt;
+    }
+    .middle_div p, span {
+        font-size: 10pt;
+
+    }
+    .inner_h5 {
+        font-size: 10pt;
+    }
+}
+@media(max-width:800px){
+    .remove {
+         margin: 10px 0 0 0px;
+    }
+}

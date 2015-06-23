@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>REI Shopping Cart</title>
+    <meta http-equiv="x-ua-compatible" content="id=edge;chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="assets/icon-font.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<section class="container-fluid no_padding">
+    <header>
+        <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 menu_icon">
+           <span class="icon icon-rei-hamburger-menu"></span>
+           </div>
+        <div class="col-lg-10 col-md-8 col-sm-6 col-xs-4 logo">
+           <img src="assets/rei-logo-white.png">
+        </div>
+        <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 cart_icon">
+            <div class="pull-right">
+              <i class="icon icon-rei-cart"></i>
+                <span>4</span>
+            </div>
+         </div>
+    </header>
+
+
+
+
+        </div>
+    </header>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+    <div class="row bgGray">
+        <div class="col-lg-12 col-xs-12">
+            <div class="col-lg-6 col-xs-6 paddingZero">Shioping Cart</div>
+            <div class="col-lg-6  col-xs-6 text-right paddingZero">SubTotal:<strong>$9000</strong></div>
+        </div>
+        <div class="col-lg-12 col-xs-12 top_btnchechout">
+            <div align="right"> <button type="button" class="btn btn-warning btn-md ">Check out</button></div>
+        </div>
+    </div>
+<div class="clearfix"></div>
+    <ul id="js-cart-items" class="main_item"></ul>
+    <script id="js-cart-item-template" type="text/html">
+        {% for item in items %}
+        <li class="col-lg-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 left_div"><img src={{item.image}}></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-9 middle_div">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.color }}</p>
+                <p>#{{ item.sku }}</p>
+                <span>{{ item.price.sale }}<strike>{{ item.price.original }}</strike></span><br>
+
+                    <span>You Save{{ item.price.savings }}</span>
+
+
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 quantity">
+                <span class="qnty">Qty:</span>
+                <input type="text" value="{{item.quantity}}" readonly>
+                <span class="remove">Remove</span>
+            </div>
+
+
+        </li>
+        {% endfor %}
+    </script>
+    <div class="clearfix"></div>
+    <div class="row bgGray">
+        <div class="col-xs-12 col-lg-12"><img  src="assets/car_icon.png">
+            <strong>This Order Qualifies for  FREE U.S. Standard Shpping! <a href=""#>Learn more</a></strong></div>
+
+        <div align="right">FREE Shipping:<STRONG>$0.00</STRONG></div>
+        <div align="right">Sub total:<STRONG>$900.00</STRONG></div>
+        <div align="right" class="margin-top-ten">
+
+            <button type="button" class="btn btn-warning btn-md  btn-warning_shippingbtn ">Continue Shipping</button>
+            <button type="button" class="btn btn-warning btn-md margin-left" >Check out</button>
+        </div>
+    </div>
+</div>
+
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <ul class="inner_ul1">
+            <h5>Contact us</h5>
+            <li>live chat<span class="icon icon-comment"></span></li>
+            <li>Call1-800-426-4840</li>
+        </ul>
+        <ul class="inner_ul">
+
+            <h5>Need help?</h5>
+            <li><span>Visit our </span><a>help center</a></li>
+
+        </ul>
+
+         <h5 class="inner_h5">You might also like</h5>
+        <ul id="js-side-cart-items"></ul>
+
+        <script id="js-side-cart-items-template" type="text/html">
+            {% for item in items %}
+
+            <li class="col-lg-12 col-mg-12 col-sm-12 col-xs-6">
+                <div class="right_img"><img src={{item.image}}></div>
+                <div class="right_text"><span>{{ item.rating }}</span><br>
+                    <span>{{ item.name }}</span><br>
+
+                    <span>{{ item.price }}</span><br>
+
+                </div>
+
+
+            </li>
+            {% endfor %}
+        </script>
+
+    </div>
+
+
+
+    <!-- You don't *need* to touch anything below this line &ndash;&gt;-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.5.3/jquery.mockjax.min.js"></script>
+    <script src="lib/mock-services.js"></script>
+    <script src="lib/nunjucks.min.js"></script>
+    <script>
+        window.Cart = {};
+    </script>
+    <script src="src/js/view.js"></script>
+    <script src="src/js/model.js"></script>
+    <script src="src/js/controller.js"></script>
+    <script src="src/js/main.js"></script>
+
+
+
+
+</section>
+</body>
+</html>
